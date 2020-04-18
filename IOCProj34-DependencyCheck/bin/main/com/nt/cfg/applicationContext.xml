@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+<bean id="crs" class="com.nt.bean.Course">
+<property name="course" value="java"/>
+<property name="duration" value="6"/>
+</bean>
+
+<bean id="stu" class="com.nt.bean.Student" dependency-check="all">
+<property name="name" value="bhups"/>
+<property name="regdNo" value="150120"/>
+<property name="course" ref="crs"/>
+
+</bean>
+
+</beans>

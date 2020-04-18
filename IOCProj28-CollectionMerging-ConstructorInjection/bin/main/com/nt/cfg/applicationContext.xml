@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="ep1" class="com.nt.bean.Employee" abstract="true">
+<constructor-arg name="emp">
+<list>
+<value>hari</value>
+<value>rama</value>
+</list>
+</constructor-arg>
+</bean>
+
+<bean id="ep2" class="com.nt.bean.Employee" parent="ep1">
+<constructor-arg name="emp">
+<list merge="true">
+<value>pk</value>
+<value>bbmp</value>
+</list>
+</constructor-arg>
+</bean>
+
+</beans>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="pu1" class="com.nt.bean.Customer">
+	<property name="sname" value="bhups"/>
+	<property name="bno" value="OD25BH6598"/>
+	<property name="bikeName" value="pulsor"/>
+	<property name="cc" value="150"/>
+	<property name="engine" value="13l"/>
+</bean>
+<bean id="pu2" class="com.nt.bean.Customer" parent="pu1">
+	<property name="sname" value="sourav"/>
+	<property name="bno" value="OD25BH9900"/>
+	
+</bean>
+
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="bmcusto" class="com.nt.beans.BankCustomer">
+	<constructor-arg>
+		<bean id="bmacc" class="com.nt.beans.BankAccount">
+		<property name="accno" value="150128212" />
+		<property name="holderName" value="bhupati"/>
+		<property name="balance" value="25000"/>
+		<property name="NRIbanking" value="true"/>
+		</bean>
+	</constructor-arg>
+	<constructor-arg  value="SBI"></constructor-arg>
+</bean>
+
+</beans>

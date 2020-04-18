@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="IOCProj62-ICC-ServiceLocatore-Instantiation-tracking">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/WebContent"/>
+        <property name="context-root" value="IOCProj62-ICC-ServiceLocatore-Instantiation-tracking"/>
+        <property name="java-output-path" value="/IOCProj62-ICC-ServiceLocatore-Instantiation-tracking/bin/default"/>
+    </wb-module>
+</project-modules>

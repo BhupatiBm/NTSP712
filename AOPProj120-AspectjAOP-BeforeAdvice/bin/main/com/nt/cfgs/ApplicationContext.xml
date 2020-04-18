@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+<bean id="bank" class="com.nt.service.BankLoanAprover"/>
+<bean id="auditAdvice" class="com.nt.aspect.AuditingAdvice">
+<property name="manager" value=" Mr.BHUPATI"/>
+</bean>
+<aop:config>
+<aop:pointcut id="ptc1" expression="execution(java.lang.String com.nt.service.BankLoanAprover.Aprove(..)) and args (loanId)" />
+
+<aop:aspect ref="auditAdvice">
+<aop:before method="audit" pointcut-ref="ptc1" />
+</aop:aspect>
+</aop:config>
+
+</beans>

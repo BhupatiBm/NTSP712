@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+  
+<bean id="arthServ" class="com.nt.service.ArithmeticService"/>
+<bean id="arthLog" class="com.nt.aspect.ArithmeticLogger"/>
+
+<aop:config>
+	<aop:pointcut expression="execution(float com.nt.service.ArithmeticService.div(..))" id="ptc1"/>
+		<aop:aspect ref="arthLog" order="1">
+			<aop:after-throwing method="exceptionLogging" pointcut-ref="ptc1" throwing="ex"/>
+		</aop:aspect>  
+</aop:config>
+ 
+</beans>

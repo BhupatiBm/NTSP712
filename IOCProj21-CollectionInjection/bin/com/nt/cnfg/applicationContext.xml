@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="mrk" class="com.nt.bens.Student">
+	<property name="marks">
+	<list>
+		<value>10</value>
+		<value>80</value>
+		<value>60</value>
+		<value>70</value>
+		<value>30</value>
+	</list>
+	</property>
+	<property name="names" >
+	<list>
+		<value>raja</value>
+		<value>rani</value>
+		<value>bhups</value>
+		<value>pradosh</value>
+		<value>sourav</value>
+	</list>
+	</property>
+	<property name="regdNo" >
+	<set>
+		<value>1501298212</value>
+		<value>1501298213</value>
+		<value>1501298214</value>
+		<value>1501298215</value>
+		<value>1501298216</value>
+	</set>
+	</property>
+	<property name="subject">
+	<map>
+		<entry key="PHYSICS" value="50"></entry>
+		<entry key="CHEMISTRY" value="60"></entry>
+		<entry key="MATH" value="65"></entry>
+		<entry key="ENGLISH" value="35"></entry>
+		<entry key="IT" value="45"></entry>
+	</map>
+	</property>
+	<property name="stuHeight">
+	<props>
+		<prop key="kk">25</prop>
+		<prop key="KK">35</prop>
+		<prop key="KK">45</prop>
+	</props>
+	</property>
+</bean>
+
+
+
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="cal" class="java.util.Calendar" factory-method="getInstance"></bean>
+
+<bean id="propes" class="java.lang.System" factory-method="getProperties"></bean>
+
+<bean id="cl" class="java.lang.Class" factory-method="forName">
+<constructor-arg value="java.util.Date" />
+</bean>
+
+<bean id="s1" class="java.lang.String" >
+<constructor-arg value="Hello"/>
+</bean>
+<bean id="s2" factory-bean="s1" factory-method="concat">
+<constructor-arg value=" whats up bro"/>
+</bean>
+
+<bean id="s3" class="java.lang.StringBuffer" >
+<constructor-arg value="Hello  whats up bro"/>
+</bean>
+<bean id="s4" factory-bean="s3" factory-method="substring">
+<constructor-arg value=" 0"/>
+<constructor-arg value=" 6"/>
+</bean>
+
+</beans>

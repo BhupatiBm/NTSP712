@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="pu" class="com.nt.bean.Customer" abstract="true">
+	<constructor-arg name="bikeName" value="pulsor"/>
+	<constructor-arg name="cc" value="150"/>
+	<constructor-arg name="engine" value="13l"/>
+</bean>
+<bean id="pu1" class="com.nt.bean.Customer" parent="pu">
+	<constructor-arg name="sname" value="sourav"/>
+	<constructor-arg name="bno" value="OD25BH9900"/>
+</bean>
+<bean id="pu2" class="com.nt.bean.Customer" parent="pu">
+	<constructor-arg name="sname" value="bhups"/>
+	<constructor-arg name="bno" value="OD25BH6598"/>
+</bean>
+
+
+</beans>

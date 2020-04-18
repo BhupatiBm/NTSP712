@@ -1,0 +1,38 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.2.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'nit'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation ('org.springframework.boot:spring-boot-starter-jdbc'){
+	      //exclude group: 'com.zaxxer', module: 'HikariCP'
+	}
+	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+ compile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+ 
+ // https://mvnrepository.com/artifact/com.mchange/c3p0
+compile group: 'com.mchange', name: 'c3p0', version: '0.9.5.5'
+ 
+ 
+ // https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
+compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
+ 
+	
+}
+
+test {
+	useJUnitPlatform()
+}
